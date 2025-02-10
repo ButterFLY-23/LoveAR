@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Святого Валентина, Аружан!</title>
+    <style>
+        body {
+            background-color: #fce4ec;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .block {
+            background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .gif-container img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .poem, .love-message {
+            color: #ffffff;
+            font-size: 22px;
+            background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        .falling-item {
+            position: fixed;
+            color: #ff0000;
+            font-size: 24px;
+            animation: fall linear infinite;
+            z-index: 0;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100px); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <h1>Моя любимая Аружан, с Днем Святого Валентина!</h1>
+            <p>Ты - мое самое дорогое сокровище. Каждое мгновение с тобой делает меня счастливым. Ты мое вдохновение, мой свет и моя радость.</p>
+            <p>Я люблю тебя всем сердцем и всегда буду рядом, поддерживать и заботиться о тебе.</p>
+            <p>Ты - мое чудо, и я бесконечно благодарен судьбе за тебя.</p>
+        </div>
+        <div class="gif-container block">
+            <img src="https://i.pinimg.com/originals/a8/05/94/a80594f73aed7e81210600330bea0085.gif" alt="Love GIF">
+        </div>
+        <div class="poem">
+            <p>Мой ангел нежный, светлый мой, <br>
+            Ты даришь счастье и покой. <br>
+            Твои глаза - сиянье звезд, <br>
+            Любовь к тебе - мой главный тост. <br><br>
+
+            Когда ты рядом, мир цветет, <br>
+            И сердце песню мне поет. <br>
+            Твой смех как музыка весны, <br>
+            Ты - воплощение мечты. <br><br>
+
+            Сквозь бури, грозы и года <br>
+            Моя любовь к тебе жива. <br>
+            Ты светлый луч среди теней, <br>
+            Хранитель грез, мечты моей. <br><br>
+
+            Пусть этот день тебе несет <br>
+            Все счастье мира и полет. <br>
+            Ты — жизнь моя, ты — мой кумир, <br>
+            С тобою сказка, свет и мир. </p>
+        </div>
+        <div class="love-message">
+            <p>Я ТЕБЯ ЛЮБЛЮ!</p>
+            <div class="heart-beat">❤️</div>
+        </div>
+    </div>
+    <script>
+        function createFallingItem() {
+            const items = ["❤️", "🌸", "love"];
+            const fallingItem = document.createElement("div");
+            fallingItem.classList.add("falling-item");
+            fallingItem.innerHTML = items[Math.floor(Math.random() * items.length)];
+            fallingItem.style.left = Math.random() * 100 + "vw";
+            fallingItem.style.top = "-50px";
+            fallingItem.style.animationDuration = Math.random() * 2 + 3 + "s";
+            fallingItem.style.fontSize = Math.random() * 20 + 20 + "px";
+            document.body.appendChild(fallingItem);
+            setTimeout(() => {
+                fallingItem.remove();
+            }, 5000);
+        }
+        setInterval(createFallingItem, 200);
+    </script>
+</body>
+</html>
